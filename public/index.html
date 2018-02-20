@@ -1,0 +1,101 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+    <script src="javascripts/login.js" defer=""></script>
+     <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="javascripts/validation.js" defer></script>
+    <link href="style.css" rel="stylesheet">
+
+    <!--Import materialize.css-->
+
+
+</head>
+
+<body>
+    <h1>This is the index page</h1>
+    <label for="emailsign">E-mail:</label>
+    <input type="text" name="emailsign" id="emailsign">
+    <br>
+    <label for="passwordsign">Password:</label>
+    <input type="password" name="passwordsign" id="passwordsign">
+    <br>
+    <input type="submit" value="Login" id="signin">
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="users/register" method="POST" id="register">
+        
+        <label for="email">E-mail:</label>
+        <input type="text" name="email" id="email">
+        <br>
+        <span id="errorEmail"></span>
+
+        <br>
+        
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <span id="result"></span>
+        <br>
+        <label for="confirmPassword">Confirm your Password:</label>
+        <input type="password" name="confirmPassword" id="confirmPassword">
+        <br>
+        <span id ="errorPassward"></span>
+        
+
+        <br>
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" id="firstname">
+        <br>
+        <span id="errorFirstname"></span>
+        <br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" id="lastname">
+        <br>
+        <span id="errorLastname"></span>
+        <br>
+
+        <label for="year">Date of Birth:</label>
+        <input type="text" name="year" id="year" placeholder="MM/DD/YYYY">
+        <br>
+        <span id="errorYear"></span>
+        <!-- <select name="month" id="month">
+            <option value="0">Jan</option>
+            <option value="1">Feb</option>
+            <option value="2">Mar</option>
+            <option value="3">Apr</option>
+            <option value="4">May</option>
+            <option value="5">Jun</option>
+            <option value="6">Jul</option>
+            <option value="7">Aug</option>
+            <option value="8">Sep</option>
+            <option value="9">Oct</option>
+            <option value="10">Nov</option>
+            <option value="11">Dec</option>
+        </select>
+        <input type="text" name="date" id="date" placeholder="date">
+        <br>
+        <span id="errorDate"></span> -->
+        <br>
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="text" name="phone" id="phone">
+        <br>
+        <span id="errorPhone"></span>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+    <div id="ServerResponse"></div>
+    
+ 
+
+
+</body></html>

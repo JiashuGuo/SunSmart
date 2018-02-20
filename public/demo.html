@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<title>Demo Table</title>
+<body>
+	<div class="DemoTable">
+			<table class="GenerateTable" id="demo">
+				<tr>
+				    <th>Date</th>
+					<th>Time</th>
+					<th>Longitude</th>
+					<th>Latitude</th>
+					<th>UV Value</th>
+				</tr>
+				
+			</table>
+	</div>
+	<style type="text/css">
+       
+        .DemoTable {
+            font-size: 10pt;
+            font: sans-serif;
+            font-weight: lighter;
+            width:100%;
+        }
+        
+        .GenerateTable th {
+            background-color: #07d;
+            color: white;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: center;
+            width: 20%;
+        }
+        
+        .GenerateTable td {
+            background-color: rgb(200, 200, 200);
+            padding-bottom: 5px;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: right;
+        
+        }
+        .GenerateTable tr td {
+            text-align: center;
+        }
+        .GenerateTable table {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 2px white solid;
+            width: 100%;
+        }
+
+	</style>
+
+	<script>
+		var requestData = {};
+		$.get("http://54.67.97.52/demo", requestData, function(data) {
+	        var html = "";
+	        data.alltuples.forEach(function(day) {
+	            html += "<tr><td> "+ day.sampleDate +"</td><td>"+ day.sampleTime + "</td><td>"+day.longitude+"</td><td>"+day.latitude +"</td><td>"+ day.UV_raw +"</td></tr>";
+	        });
+	        $("table").append(html);
+ 		}, "json");
+	</script>
+</body>
+
+</html>
